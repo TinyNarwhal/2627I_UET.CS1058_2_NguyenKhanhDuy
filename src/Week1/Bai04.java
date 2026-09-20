@@ -1,0 +1,2 @@
+
+//parent[8] có thể nhận các giá trị: 0, 4, 8.
