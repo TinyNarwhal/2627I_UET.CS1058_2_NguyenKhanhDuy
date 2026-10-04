@@ -20,9 +20,7 @@ class Result {
         }
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
-            for (int j = 0; j < count[i]; j++) {
-                result.add(i);
-            }
+            result.add(count[i]);
         }
         return result;
     }
@@ -32,7 +30,7 @@ class Result {
 public class Bai07 {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        //BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         int n = Integer.parseInt(bufferedReader.readLine().trim());
 
@@ -42,14 +40,13 @@ public class Bai07 {
 
         List<Integer> result = Result.countingSort(arr);
 
-        bufferedWriter.write(
+        System.out.println(
                 result.stream()
                         .map(Object::toString)
                         .collect(joining(" "))
-                        + "\n"
         );
 
         bufferedReader.close();
-        bufferedWriter.close();
+        //bufferedWriter.close();
     }
 }
